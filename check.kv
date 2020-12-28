@@ -1,0 +1,34 @@
+<MyLayout>
+	BoxLayout:
+		orientation: "vertical"
+		size: root.width, root.height
+		
+		Label:
+			text: "Select Pizza Toppings"
+			font_size:32
+
+		GridLayout:
+			cols:2
+
+			Label:
+				text: "Pepperoni"
+				font_size:20
+			CheckBox:
+				on_active: root.checkbox_click(self, self.active, "Pepperoni")
+
+			Label:
+				text: "Cheese"
+				font_size:20
+			CheckBox:
+				on_active: root.checkbox_click(self, self.active, "Cheese")
+				
+			Label:
+				text: "Mushroom"
+				font_size:20
+			CheckBox:
+				on_active: root.checkbox_click(self, self.active, "Mushroom")		
+
+		Label:
+			id: output_label
+			text: ""
+			font_size:32
