@@ -1,0 +1,33 @@
+#:import Factory kivy.factory.Factory
+
+<MyPopup@Popup>
+	auto_dismiss: True
+	size_hint: 0.6, 0.2
+	pos_hint: {"x":0.2, "top": 0.9}
+
+	title: "This is a popup box"
+	
+	BoxLayout:
+		orientation: "vertical"
+		size: root.width, root.height
+		Label:
+			text: "Something in our popup box!"
+			font_size: 24
+		Button:
+			text: "Close Me!"
+			font_size: 24
+			on_release: root.dismiss()
+<MyLayout>
+
+	BoxLayout:
+		orientation: "vertical"
+		size: root.width, root.height
+		
+		Label: 
+			text: "Popup Stuff"
+			font_size: 32
+
+		Button:
+			text: "Popup"
+			font_size: 32
+			on_release: Factory.MyPopup().open()
