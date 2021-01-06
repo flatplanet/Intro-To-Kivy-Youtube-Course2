@@ -14,12 +14,12 @@ class WindowManager(ScreenManager):
 	pass
 
 # Designate Our .kv design file 
-Builder.load_file('new_window.kv')
+kv = Builder.load_file('new_window.kv')
 
 
 class AwesomeApp(App):
 	def build(self):
-		return FirstWindow()
+		return kv
 
 if __name__ == '__main__':
 	AwesomeApp().run()
