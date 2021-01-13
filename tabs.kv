@@ -1,0 +1,29 @@
+<MyLayout>
+	do_default_tab: False
+
+	size_hint: .5, .5
+	pos_hint: {'center_x': .5, 'center_y': .5}
+
+	tab_pos: 'left_top'
+
+	TabbedPanelItem:
+		text: "Tab 1"
+		Label:
+			text: "Hello World!"
+
+	TabbedPanelItem:
+		text: "Tab 2"
+		BoxLayout:
+			Label:
+				text: "Press The Button =>"
+			Button:
+				text: "Click Me!!"
+
+	TabbedPanelItem:
+		text: "Tab 3"
+
+		Image:
+			source: "images/aspen1.jpg"
+
+
+		
