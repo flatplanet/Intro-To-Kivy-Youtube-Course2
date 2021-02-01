@@ -1,0 +1,21 @@
+<MyLayout>
+	BoxLayout:
+		orientation: "vertical"
+		size: root.width, root.height
+		
+		Label:
+			id: my_label
+			text: "0% Progress"
+
+		ProgressBar:
+			id: my_progress_bar
+			# Set Default Value
+			# value: .25
+			min: 0
+			max: 1
+			pos_hint: {'x':.1}
+			size_hint_x: .8
+
+		Button:
+			text: "Press Me!"
+			on_press: root.press_it()
