@@ -11,7 +11,7 @@ class MyLayout(Widget):
 			self.ids.my_label.text = "You clicked the Switch On!!"
 		else:
 			self.ids.my_label.text = "You clicked the Switch Off!!"
-			self.ids.my_switch.disabled = True
+			#self.ids.my_switch.disabled = True
 
 class AwesomeApp(App):
 	def build(self):
